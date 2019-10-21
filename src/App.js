@@ -134,6 +134,11 @@ export function App(props) {
               onChange={e => {
                 setNewTask(e.target.value);
               }}
+              onKeyPress={event => {
+                if (event.key === "Enter") {
+                  addTask();
+                }
+              }}
             />
             <Button
               variant="contained"
